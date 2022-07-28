@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load social_share %}
 <html>
 <head>
 <!-- CSS only -->
@@ -21,24 +22,26 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{% url 'show_qr' %}">QRCode</a>
         </li>
-        {% if request.user.is_authenticated %}
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{% url 'add_qr' %}">Add QRCode</a>
+        </li>
+        {% comment %} {% if request.user.is_authenticated %} {% endcomment %}
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{% url 'dashboard' %}">Dashboard</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{% url 'dashboard' %}">Gen QRCode</a>
-        </li>
+        
 
          <li class="nav-item">
           <a class="nav-link" href="{% url 'logout' %}">Logout</a>
         </li>
     
-        {% else %}
+        {% comment %} {% else %} {% endcomment %}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'login' %}">Login</a>
         </li>
-        {% endif %}
+        {% comment %} {% endif %} {% endcomment %}
     
     </div>
   </div>

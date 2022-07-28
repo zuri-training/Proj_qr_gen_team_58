@@ -1,14 +1,23 @@
 {% extends "base.html" %}
+
 {% block title %}Show QRCode{% endblock %}
 {% block content %}
 
 
 <h1>Show Qrcode</h1>
-<hr>
 
 
-<p>{{name}} - {{obj.name}}</p>
+{% comment %} {{ qr_list }} {% endcomment %}
+<div class="row">
+<div class="flex">
+{% for items in qr_list %}
 
-<img src={{obj.webqr_code.url}}>
+  <img  src={{ items.webqr_code.url }}>
+    {% comment %} <p class="">{{items.name}}</p> {% endcomment %}
+
+{% endfor %}
+</div>
+</div>
+{% comment %} <img src={{obj.webqr_code.url}}> {% endcomment %}
 
 {% endblock %}
