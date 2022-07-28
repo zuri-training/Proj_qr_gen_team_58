@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Show QRCode{% endblock %}
+{% block content %}
+
+
+<h1>Show Qrcode</h1>
+<hr>
+
+
+<p>{{name}} - {{obj.name}}</p>
+
+<img src={{obj.webqr_code.url}}>
+
+{% endblock %}
