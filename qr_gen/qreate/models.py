@@ -18,7 +18,7 @@ class Webqr(models.Model):
 
     def save(self, *args, **kwargs):
         qr_image = qrcode.make(self.data)
-        canvas = Image.new('RGB', (290,290), 'brown')
+        canvas = Image.new('RGB', (480,480), 'white')
         draw = ImageDraw.Draw(canvas)
         canvas.paste(qr_image)
         fname = f'qr_code-{self.name}.png'
