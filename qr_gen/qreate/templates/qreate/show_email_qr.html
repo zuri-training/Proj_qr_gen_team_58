@@ -1,20 +1,22 @@
 {% extends "base.html" %}
-
 {% block title %}Show QRCode{% endblock %}
 {% block content %}
 
 
-<h1>Show Qrcode</h1>
+<h1>Show EMail Qrcode</h1>
+<hr>
 
 
 <p> {{test.name}}</p>
 <form action="" method="post">
     {% csrf_token %}
     <input type="text" name="name" id="name" placeholder="name your qr" style="margin-bottom: 10px;"><br>
-    <input type="url" name="url" id="url" placeholder="url here">
+    <input type="text" name="to" id="to" placeholder="EMail Recipient" style="margin-bottom: 10px;"><br>
+    <input type="text" name="subject" id="subject" placeholder="subject" style="margin-bottom: 10px;"><br>
+    <input type="text" name="body" id="body" placeholder="short mail template body style="margin-bottom: 10px;"><br>
+
     <button type="submit">Qreate</button>
 </form>
 <img src={{test.webqr_code.url}}>
-
 
 {% endblock %}
