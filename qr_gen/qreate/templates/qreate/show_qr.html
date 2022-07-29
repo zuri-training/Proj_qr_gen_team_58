@@ -7,8 +7,13 @@
 <hr>
 
 
-<p>{{name}} - {{obj.name}}</p>
-
-<img src={{obj.webqr_code.url}}>
+<p> {{test.name}}</p>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="name" id="name" placeholder="name your qr" style="margin-bottom: 10px;"><br>
+    <input type="url" name="url" id="url" placeholder="url here">
+    <button type="submit">submit</button>
+</form>
+<img src={{test.webqr_code.url}}>
 
 {% endblock %}
