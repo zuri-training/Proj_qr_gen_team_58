@@ -1,10 +1,10 @@
 {% extends "base.html" %}
+
 {% block title %}Show QRCode{% endblock %}
 {% block content %}
 
 
 <h1>Show Qrcode</h1>
-<hr>
 
 
 <p> {{test.name}}</p>
@@ -15,5 +15,6 @@
     <button type="submit">Qreate</button>
 </form>
 <img src={{test.webqr_code.url}}>
+
 
 {% endblock %}

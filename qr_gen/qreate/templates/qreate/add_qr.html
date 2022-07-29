@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Show QRCode{% endblock %}
+{% block content %}
+
+
+<h1>Generate Qrcode</h1>
+
+{% if submitted %}
+    Your QRCode was generated Successfully
+{% else %}
+
+    <form method=POST>
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <input type="submit" value="Generate QrCode">
+    </form>
+
+{% endif %}
+
+
+
+{% endblock %}
