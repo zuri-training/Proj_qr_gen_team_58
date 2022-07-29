@@ -17,7 +17,7 @@ Task not yet implemented
 
 # Contribution Guide
 ### Fork The Repo
-* Navigate to the Spoon-Knife project at [https://github.com/zuri-training/Proj_qr_gen_team_58] ([https://github.com/zuri-training/Proj_qr_gen_team_58)
+* Navigate to the Spoon-Knife project at [https://github.com/zuri-training/Proj_qr_gen_team_58](https://github.com/zuri-training/Proj_qr_gen_team_58)
 * Click on the fork button
 * Confirm that the owner name is yours and name of the name of the project matches the original. Optionally, you can add a description to your fork.
 * Copy the default main branch
@@ -25,7 +25,7 @@ Task not yet implemented
 
 ### Clone The Repo
 * Navigate to your fork of the repository
-* Click on **==Code==** .
+* Click on **Code** .
 * Copy the URL for the repository.
     To clone the repository using HTTPS, under "HTTPS", click on the copy button.
 * Open git bash
