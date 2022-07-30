@@ -5,6 +5,9 @@ from .models import Webqr
 from .forms import UrlForm
 # Create your views here.
 
+def home(request):
+    return render(request, 'qreate/home.html')
+
 def created_qr(request):
     qr_list = Webqr.objects.last()
     return render(request, 'qreate/created_qr.html', {'qr_list':qr_list})
