@@ -2,7 +2,7 @@
 1. Figma - https://www.figma.com/file/a082s18UZ19oI1DBQbFzk1/QReate?node-id=520%3A8409
 2. Task sheet - https://docs.google.com/spreadsheets/d/19bj-5QFdSwQQ6Ks3CcQvKvkfJQVTCRUoQDiTWbltUS0/edit#gid=0
 3. User Research - https://docs.google.com/document/d/17bf-KuVd1iLvD8KgX1QdZVRbZyu4nEpNQIbqdx_ZNC8/edit
-4. Documentation - 
+4. Documentation(Road Map) - https://www.figma.com/file/i0496qlZApmTU6XON1Q3Ie/QReate-Documentation?node-id=437%3A410
 5. Database schema - https://www.figma.com/file/CywGyjZ351Cz3VobGr1Ahe/Database-Schema?node-id=0%3A1
 
 # Proj_qr_gen_team_58
