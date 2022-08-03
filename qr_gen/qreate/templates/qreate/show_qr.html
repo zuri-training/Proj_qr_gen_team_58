@@ -6,15 +6,19 @@
 
 <h1>Show Qrcode</h1>
 
+{% if qr_list %}
+ {% for items in qr_list %}
 
-<p> {{test.name}}</p>
-<form action="" method="post">
-    {% csrf_token %}
-    <input type="text" name="name" id="name" placeholder="name your qr" style="margin-bottom: 10px;"><br>
-    <input type="url" name="url" id="url" placeholder="url here">
-    <button type="submit">Qreate</button>
-</form>
-<img src={{test.webqr_code.url}}>
+  <img  src={{items.webqr_code.url}}>
+    {% comment %} <p class="">{{items.name}}</p> {% endcomment %}
+    {{items.name}}
+    <a href="{{items.webqr_code.url}}" download>download file in png</a>
+    <a href="{% url 'qr_pdf' items.pk %} " ><button class="btn btn-secondary">download pdf</button></a>
+{% endfor %}
+  
+{% else %}
+<h5> You are yet to generate a Qr code</h5>
+{% endif %}
 
 
 {% endblock %}
