@@ -22,10 +22,10 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{% url 'show_qr' %}">QRCode</a>
         </li>
-        <li class="nav-item">
+        {% comment %} <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{% url 'show_email_qr' %}">Email QRCode</a>
-        </li>
-        {% if request.user.is_authenticated %} 
+        </li> {% endcomment %}
+        {% comment %} {% if request.user.is_authenticated %}  {% endcomment %}
       
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{% url 'add_qr' %}">Add QRCode</a>
