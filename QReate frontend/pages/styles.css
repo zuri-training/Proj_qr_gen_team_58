@@ -1,0 +1,82 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.FAQ-btns{
+    border: 2px solid #20746F; 
+    border-radius: 5px; 
+    width: 90%;
+}
+.accordion-button{
+    padding: 10px 15px; 
+}
+.accordion-body{
+    padding: 5px 20px;
+}
+.accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: #fff;
+    box-shadow: none;
+}
+.hr-lines{
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #c8c9ca; 
+    line-height: 0.1em;
+}
+.login-btn{
+    background-color: #20746F;
+    border-radius: 5px;
+    color: white;
+    border: none; 
+    padding: 10px 0;
+}
+.google-btn, .apple-btn{
+    border: 2px solid #20746F; 
+    color:#20746F; 
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.google-btn > img, .apple-btn > img{
+    vertical-align: text-bottom;
+}
+
+@media (max-width: 576px) {
+    p{
+        font-size: 12px;
+    }
+    .logo{
+        width: 45px;
+    }
+    .embed{
+        font-size: 16px;
+    }
+    .icon-size{
+        margin: auto;
+        max-width: 45px;
+    }
+    .icon-sizes{
+        margin: auto;
+        height: 61px;
+        max-width: 65px;
+    }
+}
+@media (max-width: 767px){
+    .illustration{
+        max-width: 80%;
+    }
+}
+@media (min-width: 767px){
+    .illustration > img{
+        width: 80%;
+    }
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    .dropdown-toggle::after{
+        display: none;
+    }
+    .hero{
+        font-size: 40px;
+    }
+}
