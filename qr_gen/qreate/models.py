@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw
 
 class Webqr(models.Model):
     name = models.CharField(max_length=200)
-    data = models.CharField(max_length=1000, blank=True)
+    # data = models.CharField(max_length=1000, blank=True)
     webqr_code = models.ImageField(upload_to='qr_codes', blank=True)
 
 
@@ -17,7 +17,7 @@ class Webqr(models.Model):
 
 
     def save(self, *args, **kwargs):
-        qr_image = qrcode.make(self.data)
+        qr_image = qrcode.make(self.name)
         canvas = Image.new('RGB', (480,480), 'white')
         draw = ImageDraw.Draw(canvas)
         canvas.paste(qr_image)
