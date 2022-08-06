@@ -24,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
     path('', include('qreate.urls')),
+    path('', include('common.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
