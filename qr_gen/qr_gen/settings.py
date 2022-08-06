@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_social_share',
+    
     'reportlab',
     'account',
     'qreate',
+    'common',
 
 ]
 
@@ -124,6 +126,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [ BASE_DIR / "static", ]
+
 MEDIA_ROOT = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -145,3 +149,6 @@ LOGOUT_URL ='logout'
 CSRF_TRUSTED_ORIGINS=[
     'https://8000-godhanded-projqrgenteam-pix0hd15slx.ws-eu54.gitpod.io',
 ]
+
+DEFAULT_FROM_EMAIL = 'info@qreate.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
