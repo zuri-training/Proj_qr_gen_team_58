@@ -150,5 +150,5 @@ CSRF_TRUSTED_ORIGINS=[
     'https://8000-godhanded-projqrgenteam-pix0hd15slx.ws-eu54.gitpod.io',
 ]
 
-DEFAULT_FROM_EMAIL = 'info@qreate.com'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

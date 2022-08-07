@@ -8,4 +8,4 @@ sqlparse==0.4.2
 tzdata==2022.1
 backports.zoneinfo==0.2.1
 xhtml2pdf==0.2.8
-
+WeasyPrint==51

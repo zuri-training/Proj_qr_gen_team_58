@@ -12,8 +12,9 @@
   <img  src={{items.webqr_code.url}}>
     {% comment %} <p class="">{{items.name}}</p> {% endcomment %}
     {{items.name}}
-    <a href="{{items.webqr_code.url}}" download>download file in png</a>
-    <a href="{% url 'qr_pdf' items.pk %} " ><button class="btn btn-secondary">download pdf</button></a>
+    <a href="{{items.webqr_code.url}}" download>download file in png</a> <br>
+    <a href="{% url 'qr_pdf' items.pk %} " ><button class="btn btn-secondary">download pdf</button></a><br>
+    <a href="{% url 'qr_jpg' items.pk %} " ><button class="btn btn-secondary">download Jpg</button></a>
 {% endfor %}
   
 {% else %}

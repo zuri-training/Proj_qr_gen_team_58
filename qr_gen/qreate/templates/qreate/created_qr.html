@@ -10,13 +10,9 @@
 
   <img  src={{ qr_list.webqr_code.url}}>
 
-
-{% post_to_whatsapp object_or_url "Share via WhatsApp" %}
-    
-
-{% post_to_twitter "Qr Code for my website. Check it out!" object_or_url "Post to Twitter" %}
-
-
+<a href="{{qr_list.webqr_code.url}}" download>download file in png</a>
+<a href="{% url 'qr_jpg' qr_list.pk %} " ><button class="btn btn-secondary">download Jpg</button></a>
+<a href="{% url 'qr_pdf' qr_list.pk %} " ><button class="btn btn-secondary">download pdf</button></a>
 
 
 {% endblock %}

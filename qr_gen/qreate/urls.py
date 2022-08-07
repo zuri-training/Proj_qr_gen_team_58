@@ -14,5 +14,5 @@ urlpatterns = [
     path('add_qr/', views.add_qr, name='add_qr'),
     path('created/', views.created_qr, name='created_qr'),
     path('qr_pdf/<pk>/', views.qr_pdf, name='qr_pdf'),
-
+    path('qr_jpg/<pk>/', views.qr_jpg, name='qr_jpg'),
 ]
