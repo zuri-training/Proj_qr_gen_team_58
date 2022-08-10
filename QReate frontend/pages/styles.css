@@ -84,9 +84,6 @@ body{
 }
 
 /*  Resources.blog*/
-.main{
-    
-}
 .hero-section{
     background-color: #F7FFFE;
    
@@ -124,15 +121,9 @@ body{
     width: 55%;
     padding-top: 50px;
 }
-.hero-img{
-    
-   
-}
+
 .hero-img >div{
     width: 60%;
-}
-.pic-section{
-    
 }
 
 .search-bar >input{
