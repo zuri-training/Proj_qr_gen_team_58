@@ -6,6 +6,15 @@ body{
     border-radius: 5px; 
     width: 90%;
 }
+.offcanvas-start {
+    width: 247px;
+}
+.dash-img{
+    width: 25em;
+}
+.sidenav-link{
+    margin-bottom: 41px;
+}
 .accordion-button{
     padding: 10px 15px; 
 }
@@ -40,7 +49,9 @@ body{
 .google-btn > img, .apple-btn > img{
     vertical-align: text-bottom;
 }
-
+.active{
+    color: #ce2321;
+}
 @media (max-width: 576px) {
     p{
         font-size: 12px;
@@ -60,10 +71,25 @@ body{
         height: 61px;
         max-width: 65px;
     }
+    .logout{
+        height: 13em;
+    }
 }
 @media (max-width: 767px){
-    .illustration{
+    .illustration, .feat{
         max-width: 80%;
+    }
+    .code-type{
+        font-size: 16px;
+    }
+    .card-wrapper-dash, .dash-card{
+        border-radius: 10px;
+    }
+    .dash-label{
+        font-size: 12px;
+    }
+    .code-img{
+        height: 65%;
     }
 }
 @media (min-width: 767px){
@@ -79,4 +105,15 @@ body{
     .hero{
         font-size: 40px;
     }
+    .card-wrapper-dash{
+        width: 85%;
+        border-radius: 40px;
+    }
+    .dash-card{
+        border-radius: 40px;
+    }
+    .dash-nav{
+        width: 75%;
+    }
 }
+

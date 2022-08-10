@@ -45,33 +45,36 @@
         </button>
 
         <!-- Collapsible wrapper -->
-          <div class="collapse navbar-collapse" id="navbarButtonsExample">
+		<div class="collapse navbar-collapse" id="navbarButtonsExample">
             <!-- Center links -->
-              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0" id="navBar">
                 <li class="nav-item">
                   <a class="nav-link text-dark" href="home.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark" href="#">Features</a>
+                  <a class="nav-link text-dark" href="features.html">Features</a>
                 </li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Resources
-					</a>
-					<ul class="dropdown-menu">
-					  <li><a class="dropdown-item" href="#">Blog</a></li>
-					  <li><a class="dropdown-item" href="#">User Cases</a></li>
-					</ul>
-				</li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Resources
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="resources-blog.html">Blog</a></li>
+                    <li><a class="dropdown-item" href="#">User Cases</a></li>
+                  </ul>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link text-dark" href="support.html">Support</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="dashboard.html">dashboard-preview</a>
                 </li>
               </ul>
               <!-- Center links -->
 
             <!-- Left links -->
               <div class="d-flex align-items-center">
-                <a href="login.html" class="btn px-3 me-2" style=" border: 2px solid #20746F">
+                <a href="login.html" class="btn px-3 me-2" style=" border: 2px solid #20746F;">
                   Log In
                 </a>
                 <a href="register.html" class="btn me-3 text-light" style="background-color: #20746F;">
@@ -238,7 +241,7 @@
 				</p>
 				<hr>
 			</div>
-			<div class="text-center mt-3 mb-4 mb-md-0">
+			<div class="text-center mt-3 mb-4 mb-md-5">
 				<h1 class="pt-md-5 pt-3 mb-4 fw-bold">
 					Generate a QR Code in 60 seconds
 				</h1>
@@ -424,7 +427,7 @@
 				<div class="icon-size">
 					<img src="images and logos/web link.png" alt="" class="img-fluid mb-3">
 				</div>
-				<h5 class="mb-3">Web QR</h5>
+				<h5 class="mb-3 code-type">Web QR</h5>
 				<p class="mb-4">
 					Link to any website URL
 				</p>
@@ -433,7 +436,7 @@
 				<div class="icon-size">
 					<img src="images and logos/Gmail.png" alt="" class="img-fluid mb-3">
 				</div>
-				<h5 class="mb-3 px-md-3">Email QR</h5>
+				<h5 class="mb-3 px-md-3 code-type">Email QR</h5>
 				<p class="px-3 mb-4">
 					Send an email
 				</p>
@@ -442,7 +445,7 @@
 				<div class="icon-size">
 					<img src="images and logos/WhatsApp.png" alt="" class="img-fluid mb-3">
 				</div>
-				<h5 class="mb-3 px-4">WhatsApp</h5>
+				<h5 class="mb-3 px-4 code-type">WhatsApp</h5>
 				<p class=""> 
 					Share whatsapp link
 				</p>
@@ -451,7 +454,7 @@
 				<div class="icon-sizes">
 					<img src="images and logos/PayPal.png" alt="" class="img-fluid mb-3">
 				</div>
-				<h5 class="mb-3">Payment QR</h5>
+				<h5 class="mb-3 code-type">Payment QR</h5>
 				<p class="mb-4">
 					Share payment link
 				</p>
@@ -460,7 +463,7 @@
 				<div class="icon-sizes">
 					<img src="images and logos/Instagram.png" alt="" class="img-fluid mb-3">
 				</div>
-				<h5 class="mb-3 px-md-3">Instagram</h5>
+				<h5 class="mb-3 px-md-3 code-type">Instagram</h5>
 				<p class="px-3 mb-4">
 					Share instagram Profile
 				</p>
@@ -469,7 +472,7 @@
 				<div class="icon-size">
 					<img src="images and logos/WIFI.png" alt="" class="img-fluid mb-3">
 				</div>
-				<h5 class="mb-3 px-4">Internet</h5>
+				<h5 class="mb-3 px-4 code-type">Internet</h5>
 				<p class=""> 
 					Connect to wifi
 				</p>
@@ -522,7 +525,7 @@
 				</div>
 				<!-- Single item -->
 				<div class="carousel-item active" data-bs-interval="3000">
-					<div class="card-wrapper mx-auto" style="width: 90%;">
+					<div class="card-wrapper mx-auto mb-5" style="width: 90%;">
 						<div class="mb-3" style="background-color: #185753">
 							<div class="row g-0 justify-content-center align-items-center">
 								<div class="col-md-5 d-flex justify-content-center illustration">
@@ -700,7 +703,10 @@
 						</h2>
 						<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
 							<p class="accordion-body">
-								YES, QR codes are free to use.
+								You can use it to share your business Information,
+								to promote events, It can be placed on your products 
+								to enable customers confirm genuity or send feedback etcetera. 
+								The list is endless.
 							</p>
 						</div>
 					</div>
@@ -712,7 +718,10 @@
 						</h2>
 						<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
 							<p class="accordion-body">
-								YES, QR codes are free to use.
+								Your information is embedded into the usually black 
+								squares and dots pattern you see and when scanned, 
+								the unique pattern is translated into human-readable 
+								data i.e your Information.
 							</p>
 						</div>
 					</div>
@@ -724,7 +733,9 @@
 						</h2>
 						<div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
 							<p class="accordion-body">
-								YES, QR codes are free to use.
+								QReate allows you create free QR codes that are 
+								downloadable and can be shared in 3 easy steps 
+								Select data type - Input Information - Customize view and voila!.
 							</p>
 						</div>
 					</div>
@@ -736,7 +747,8 @@
 						</h2>
 						<div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
 							<p class="accordion-body">
-								YES, QR codes are free to use.
+								QReate is very safe to use as data is encoded 
+								and can only be viewed by the recepients of the generated code. 
 							</p>
 						</div>
 					</div>
@@ -748,7 +760,7 @@
 						</h2>
 						<div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
 							<p class="accordion-body">
-								YES, QR codes are free to use.
+								YES, QRreate’s free codes are very safe.
 							</p>
 						</div>
 					</div>
@@ -760,7 +772,9 @@
 						</h2>
 						<div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
 							<p class="accordion-body">
-								YES, QR codes are free to use.
+								QReate is one of the best free QR code generators 
+								out there with lot’s of customization options 
+								and data types to choose from.
 							</p>
 						</div>
 					</div>
@@ -871,6 +885,7 @@
   <!-- END OF FOOTER -->  
 
   <!-- Bootstrap JavaScript -->
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
