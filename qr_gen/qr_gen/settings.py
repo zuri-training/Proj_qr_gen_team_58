@@ -14,6 +14,8 @@ from pathlib import Path
 
 import os
 
+# import cloudinary_storage
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,9 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django_social_share',
-    
+    # 'cloudinary_storage',
+    'django.contrib.staticfiles',    
+    # 'cloudinary',
+    'django_social_share',    
     'reportlab',
     'account',
     'qreate',
@@ -128,7 +131,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [ BASE_DIR / "static", ]
 
-MEDIA_ROOT = '/media/'
+MEDIA_ROOT = 'media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -136,6 +139,15 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+# CLOUDINARY STORAGE
+
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': 'dfh3g0vol',
+#     'API_KEY': '472942484216124',
+#     'API_SECRET': 'isBZNxWV2mTnsBUX8KIbfJne7Ek'
+# }
+
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -150,5 +162,12 @@ CSRF_TRUSTED_ORIGINS=[
     'https://8000-godhanded-projqrgenteam-pix0hd15slx.ws-eu54.gitpod.io',
 ]
 
+# DEFAULT_FROM_EMAIL = 'info@qreate.com'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'brainyjohnson1@gmail.com'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+

@@ -8,4 +8,5 @@ from .models import Webqr
 class UrlForm(ModelForm):
     class Meta:
         model = Webqr
-        fields = ('name',)
+        fields = ('name', 'webqr_code',)
+        

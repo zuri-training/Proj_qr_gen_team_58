@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% comment %} {% load cloudinary %} {% endcomment %}
 {% block title %}Show QRCode{% endblock %}
 {% block content %}
 
@@ -8,16 +9,26 @@
 {% if submitted %}
     Your QRCode was generated Successfully
 {% else %}
-
-    <form method=POST>
+    <p> Input text or qr to encode  </p>
+    <form method=POST enctype="multipart/form-data">
         {% csrf_token %}
 
-        {{ form.as_p }}
+        {{ form.name }}
         <input type="submit" value="Generate QrCode">
     </form>
 
 {% endif %}
 
-
-
 {% endblock %}
+
+ {% comment %} <form method="POST" >
+         {% csrf_token %}
+         <input type="text" placeholder="URL PLEASE" required name="name">
+         <button type= "submit" >get qrcode</button>
+      </form>
+
+    {% for qr in qr_code %}
+      <img src="{{qr.image.url}}"/><br>
+      {%endfor%}
+
+ {% endcomment %}

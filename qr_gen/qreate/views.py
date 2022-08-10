@@ -1,14 +1,20 @@
 from cgitb import html
 from multiprocessing import context
+from unicodedata import name
 from urllib import response
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 import qreate
 from .models import Webqr
 from .forms import UrlForm
 from django.template.loader import get_template
 from xhtml2pdf import pisa
-from PIL import Image
+# from PIL import Image
+import qrcode
+from io import BytesIO
+from django.core.files import File
+from PIL import Image, ImageDraw
+from django.conf import settings
 
 
 # from django.conf import settings
@@ -25,8 +31,6 @@ from PIL import Image
 #     weasyprint.HTML(string=html).write_pdf(response)
 
 #     return response
-
-
 
 def qr_jpg(request, *args, **kwargs):
     object_pk = kwargs.get('pk')
@@ -71,10 +75,40 @@ def created_qr(request):
 
 # code to add a new qr code
 def add_qr(request):
+    # submitted = False
+    # if request.method == 'POST':
+    #     form = UrlForm(request.POST)
+    #     if form.is_valid():
+           
+    #         name = form.cleaned_data['name']
+            
+    #         img = qrcode.make(name)
+        
+    #         form.fields['webqr_code'] = img
+           
+    #         # save qrcode to webqrcode field submit form
+    #         form.save()
+
+    #         qr_list = Webqr.objects.last()
+            
+    #         return render(request, 'qreate/created_qr.html' , {'qr_list':qr_list})
+
+    # else:
+    #     form = UrlForm
+    #     # if 'submitted' in request.GET:
+    #     #     submitted = True
+    # return render(request, 'qreate/add_qr.html', {'form':form })
+        
+        
+
     submitted = False
     if request.method == 'POST':
+    
         form = UrlForm(request.POST)
         if form.is_valid():
+            # new additions
+
+
             form.save()
             qr_list = Webqr.objects.last()
             return render(request, 'qreate/created_qr.html', {'qr_list':qr_list})
