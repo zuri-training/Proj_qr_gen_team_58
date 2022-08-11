@@ -28,4 +28,6 @@ toggle.addEventListener('click', show_password);
     };
     toggler.addEventListener('click', showConfirmPassword);
 
+// active state for navbar
+
 

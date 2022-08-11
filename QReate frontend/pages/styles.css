@@ -1,5 +1,7 @@
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 .FAQ-btns{
     border: 2px solid #20746F; 
@@ -74,6 +76,9 @@ body{
     .logout{
         height: 13em;
     }
+    .card-section{
+        width: 80%;
+    }
 }
 @media (max-width: 767px){
     .illustration, .feat{
@@ -90,6 +95,17 @@ body{
     }
     .code-img{
         height: 65%;
+    }
+    .usecase-nav{
+        width: 90%;
+    }
+}
+@media (min-width: 576px) {
+    .blog-card{
+        width: 48%;
+    }
+    .card-section{
+        width: 90%;
     }
 }
 @media (min-width: 767px){
@@ -115,5 +131,46 @@ body{
     .dash-nav{
         width: 75%;
     }
+    .features-card, .blog-card{
+        width: 31%;
+    }
+    .usecase-card{
+        width: 45%;
+    }
+    .usecase-nav{
+        width: 60%;
+    }
 }
 
+/*  Resources.blog*/
+.search-bar >input{
+    width: 80%;
+    height: 50px;
+    background-image: url(./images-and-logos/icons8-search.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    border:1px solid #30AEA6;
+    border-radius: 5px;
+    background-color: #F7FFFE;
+    background-origin: content-box;
+    padding-right:10%;
+}
+::placeholder{
+    color: #30AEA6;
+}
+.show-more{
+    background-color: #30AEA6;
+    color: #fff;
+}
+.text>div>h1{
+    color: #000;
+    font-weight: 900;
+}
+.create-btn{
+    color: #fff;
+    background-color: #30AEA6; 
+    border: none; 
+    padding: 10px 10px;
+}
+
+/* ResourcesBlog styling*/
