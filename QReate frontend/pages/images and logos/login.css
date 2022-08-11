@@ -1,0 +1,58 @@
+/* This CSS file belongs to the log in page */
+/* log in page was coded and styled by Nyerhowho - slack@Nyerho */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.row{
+    --bs-gutter-x: 0rem;
+}
+h1{
+    color: #CE2321;
+}
+.hr-lines{
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #c8c9ca; 
+    line-height: 0.1em;
+}
+span{
+    background:#fff; 
+    padding: 0 10px;
+}
+.login-btn{
+    background-color: #20746F;
+    border-radius: 10px;
+    color: white;
+    border: none; 
+    padding: 10px 0;
+}
+button{
+    border: 2px solid #006464;
+    color: #006464;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+a{
+    color: #CE2321;
+}
+.google-btn, .apple-btn{
+    border: 2px solid #20746F; 
+    color:#20746F; 
+}
+.google-btn > img, .apple-btn > img{
+    vertical-align: text-bottom;
+}
+@media (max-width: 767px){
+    .hero{
+        max-width: 70%;
+    }
+}
+@media (min-width: 767px){
+    .hero > img{
+        width: 80%;
+    }
+}
