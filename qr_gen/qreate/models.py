@@ -7,9 +7,7 @@ from PIL import Image, ImageDraw
 # import PyPDF2
 import os
 from django.conf import settings
-# Create your models here.
-
-
+from django.contrib.auth.models import User
 
 
 class Webqr(models.Model):
@@ -58,8 +56,8 @@ class Imgqr(models.Model):
         super().save(*args, **kwargs)
 
 
-def files_path():
-    return os.path.join(settings.LOCAL_FILE_DIR, 'files')
+# def files_path():
+#     return os.path.join(settings.LOCAL_FILE_DIR, 'files')
         
 # class FileQr(models.Model):
 #     fileName = models.CharField(max_length=50)
