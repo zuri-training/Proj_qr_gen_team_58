@@ -1,6 +1,6 @@
 from .imports import *
 
-def blog(request):
+def user_cases(request):
     return render(request, 'qreate/user_cases.html')
 
 def blog(request):
