@@ -1,5 +1,11 @@
 from .imports import *
 
+def blog(request):
+    return render(request, 'qreate/user_cases.html')
+
+def blog(request):
+    return render(request, 'qreate/blog.html')
+
 
 def features(request):
     return render(request, 'qreate/features.html')

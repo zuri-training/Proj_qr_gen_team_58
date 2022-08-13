@@ -3,13 +3,136 @@
 
 {% block content %}
 
-<h1>Create an account</h1>
-<hr>
 
-<p>Please, Sign up using the following form:</p>
+
+ <!-- Register section -->
+    <div class="container-fuild">
+        <div class="row g-0 justify-content-center">
+            <!-- Illustration -->
+                <div class="col-md-6 d-md-flex justify-content-center align-items-center illustration">
+                    <img 
+                        class="img-fluid"
+                        src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290510/images%20and%20logos/Tablet_login-amico_1_lv7uyf.png" 
+                        alt="sign up illustration"
+                    />
+                </div>
+
+            <!-- Registration form -->
+                <div class="col-md-6">
+                    <!-- Form Heading -->
+                        <div class="text-center mt-2">
+                            <h1 class="fw-bold">Create an account</h1>
+                            <p class="px-3">Sign up to enjoy our amazing features</p>
+                        </div>
+                    
+                    <!-- Form Inputs -->
+                    <form class="mx-auto pe-md-5" id="form" style="width: 90%;">
+                        <!-- Full name -->
+                        <div class="mb-3 position-relative">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                        </div>
+                        <!-- Email -->
+                        <div class="mb-3 position-relative">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+                        </div>
+                        <!-- Password -->
+                        <div class="mb-3 position-relative">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="position-relative eye">
+                                <input type="password" class="form-control" id="password" name="password" required>
+                                <i class="fas fa-eye position-absolute top-50 end-0 translate-middle" id="toggle"></i>
+                                <i class="fas fa-eye-slash d-none position-absolute top-50 end-0 translate-middle"></i>    
+                            </div>
+                        </div>
+                        <!-- Confirm Password -->
+                        <div class="mb-4 position-relative">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <div class="position-relative eye">
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                                <i class="fas fa-eye position-absolute top-50 end-0 translate-middle" id="toggler"></i>
+                                <i class="fas fa-eye-slash d-none position-absolute top-50 end-0 translate-middle"></i>    
+                            </div>
+                        </div>
+                        <!-- CheckBox -->
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="checkbox" required>
+                            <label 
+                                class="form-check-label fw-bold"
+                                for="checkbox"
+                                style="font-size: 13px;">
+                                I agree to QReate 
+                                <a href="TOS.html" class="text-decoration-none" style="color: #CE2321;">TERMS OF SERVICE</a> and 
+                                <a href="privacyPolicy.html" class="text-decoration-none" style="color: #CE2321;">PRIVACY POLICY</a>
+                            </label>
+                        </div>
+                        <!-- SignUp button -->
+                        <button 
+                            type="submit"
+                            class="container-fluid btn text-white"
+                            style="background-color: #20746F; border: none; padding: 10px 0;">
+                            Sign Up
+                        </button>
+                        <!-- Or -->
+                        <div class="position-relative my-4">
+                            <hr>
+                            <p class="position-absolute top-0 start-50 translate-middle bg-white text-center"
+                            style="width: 40px">
+                            Or
+                            </p>
+                        </div>
+                    </form>
+
+                    <!-- Other Accounts Sign Up -->
+                        <div class="mx-auto pe-md-5" style="width: 90%;">
+                            <!-- Google button -->
+                            <button 
+                                class="container-fluid btn mb-3 position-relative"
+                                style="border: 2px solid #20746F; color:#20746F; padding: 10px 0;">
+                                    <img 
+                                        src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290483/images%20and%20logos/icons8-google_kl0as0.svg"
+                                        width="24"
+                                        alt="google-logo"
+                                        style="vertical-align: text-bottom;"
+                                    >
+                                Sign Up with Google
+                            </button>
+                            <!-- Apple button -->
+                            <button 
+                                class="container-fluid btn mb-3"
+                                style="border: 2px solid #20746F; color:#20746F; padding: 10px 0;">
+                                    <img src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290483/images%20and%20logos/icons8-apple-logo_cxxxov.svg"
+                                        width="25"
+                                        alt="apple-logo"
+                                        style="vertical-align: text-bottom;"
+                                    >
+                                Sign Up with Apple
+                            </button>
+                        </div>
+
+                    <!-- Sign In -->
+                        <p 
+                            class="text-center mb-4 fw-bold"
+                            style="font-size: 13px;">
+                            Already have an account?
+                            <a href="login.html" class="text-decoration-none" style="color: #CE2321;">Log in</a>
+                        </p>
+                </div>
+            <!-- End of Registration form -->
+        </div>
+    </div>
+
 <form method="POST">
 
-{{ user_form.as_p }}
+{{ form.username }}
+{{ form.first_name }}
+{% comment %} {{ user_form.as_p }}  {% endcomment %}
+{% comment %} {{ user_form.email }}
+{{ user_form.password }}
+{{ user_form.password2 }} {% endcomment %}
+
+{% comment %} {{ user_form.as_p }} {% endcomment %}
 
 {% csrf_token %}
 <p><input type="submit" value="Create my account" ></p>
