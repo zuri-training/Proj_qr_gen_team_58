@@ -60,7 +60,7 @@
 
 
 
-
+{% load static %}
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -74,7 +74,7 @@
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/a0b5f4b3f8.js" crossorigin="anonymous"></script>
   <!-- Styling -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{% static 'common/styles.css' %}">
   <title>QReate</title>
 </head>
 <body>
@@ -122,8 +122,8 @@
                     Resources
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Blog</a></li>
-                    <li><a class="dropdown-item" href="#">User Cases</a></li>
+                    <li><a class="dropdown-item" href="{% url 'blog' %}">Blog</a></li>
+                    <li><a class="dropdown-item" href="{% url 'user_cases' %}">User Cases</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -173,9 +173,9 @@
               <!--Grid column-->
               <div class="col-lg-3 col-md-6 mb-md-4 mb-4 mb-md-0">
                 <ul class="list-unstyled mb-0">
-                  <li class="pb-2"><a href="#!" class="text-light text-decoration-none">Resources</a></li>
-                  <li class="pb-2"><a href="#!" class="text-light text-decoration-none">Blog</a></li>
-                  <li class="pb-2"><a href="#!" class="text-light text-decoration-none">User Cases</a></li>
+                  <li class="pb-2"><a href="{% url 'blog' %}" class="text-light text-decoration-none">Resources</a></li>
+                  <li class="pb-2"><a href="{% url 'blog' %}" class="text-light text-decoration-none">Blog</a></li>
+                  <li class="pb-2"><a href="{% url 'user_cases' %}" class="text-light text-decoration-none">User Cases</a></li>
                   <li class="pb-2"><a href="#!" class="text-light text-decoration-none">API Solution</a></li>
                 </ul>
               </div>
@@ -184,10 +184,10 @@
               <!--Grid column-->
               <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <ul class="list-unstyled mb-0">
-                  <li class="pb-2"><a href="#!" class="text-light text-decoration-none">About Us</a></li>
-                  <li class="pb-2"><a href="#!" class="text-light text-decoration-none">Support</a></li>
-                  <li class="pb-2"><a href="#!" class="text-light text-decoration-none">Contact Form</a></li>
-                  <li class="pb-2"><a href="#!" class="text-light text-decoration-none">FAQ</a></li>
+                  <li class="pb-2"><a href="#about-us" class="text-light text-decoration-none">About Us</a></li>
+                  <li class="pb-2"><a href="{% url 'support' %}" class="text-light text-decoration-none">Support</a></li>
+                  <li class="pb-2"><a href="{% url 'support' %}" class="text-light text-decoration-none">Contact Form</a></li>
+                  <li class="pb-2"><a href="{% url 'support' %}" class="text-light text-decoration-none">FAQ</a></li>
                 </ul>
               </div>
               <!--Grid column-->
@@ -195,8 +195,8 @@
               <!--Grid column-->
               <div class="col-lg-3 col-md-6 mb-md-4 mb-4 mb-md-0">
                 <ul class="list-unstyled mb-0">
-                  <li class="pb-2"><a href="#!" class="text-light text-decoration-none">Terms of Service</a></li>
-                  <li class="pb-2"><a href="#!" class="text-light text-decoration-none">Privacy Policy</a></li>
+                  <li class="pb-2"><a href="{% url 'Terms_of_Service' %}" class="text-light text-decoration-none">Terms of Service</a></li>
+                  <li class="pb-2"><a href="{% url 'Privacy_Policy' %}" class="text-light text-decoration-none">Privacy Policy</a></li>
                 </ul>
               </div>
               <!--Grid column-->
