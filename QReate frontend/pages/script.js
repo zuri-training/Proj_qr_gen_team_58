@@ -1,3 +1,14 @@
+var nav_elements = document.querySelectorAll(".sidenav-link");
+
+for (var i = 0; i < nav_elements.length; i++) {
+    nav_elements[i].addEventListener("click", function() {
+        nav_elements.forEach(function(li) {
+            li.classList.remove(".active-sidenav-link");
+        });
+        this.classList.add(".active-sidenav-link");}
+    ); 
+}
+
 // Password toggle
 const password = document.getElementById('password');
 const toggle = document.getElementById('toggle');

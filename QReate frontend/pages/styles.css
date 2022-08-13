@@ -28,6 +28,15 @@ body{
     background-color: #fff;
     box-shadow: none;
 }
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed)::after{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");  
+}
 .hr-lines{
     width: 100%; 
     text-align: center; 
@@ -53,6 +62,10 @@ body{
 }
 .active{
     color: #ce2321;
+}
+.create-active{
+    color: #000;
+    border-bottom: 2px solid #20746F;
 }
 @media (max-width: 576px) {
     p{
@@ -107,6 +120,10 @@ body{
     .card-section{
         width: 90%;
     }
+    .logos{
+        width: 90%;
+        margin: auto;
+    }
 }
 @media (min-width: 767px){
     .illustration > img{
@@ -139,6 +156,9 @@ body{
     }
     .usecase-nav{
         width: 60%;
+    }
+    .qrcode-options{
+        width: 88%;
     }
 }
 
