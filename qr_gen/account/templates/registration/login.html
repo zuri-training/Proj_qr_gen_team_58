@@ -1,11 +1,89 @@
 {% extends "base.html" %}
 {% block title %}Login{% endblock %}
 {% block content %}
- <h1>Login</h1>
-<hr>
 
 
- {% if form.errors %}
+
+ <!-- login page -->
+  <div class="container-fluid g-0">    
+    <div class="row g-0 justify-content-center">
+      <!-- illustration -->
+      <header class="col-md-6 illustration d-md-flex justify-content-center align-items-center">
+          <img 
+              src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290477/images%20and%20logos/Frame_302_ff1ix2.png" 
+              alt="login illustration"
+              class="img-fluid hero-img"
+          />
+      </header>
+
+      <!-- login form -->
+      <main class="col-md-6">
+          <!-- form heading -->
+          <div class="main-div mt-2 text-center">
+              <h2 class="fw-bold">Log in to your account</h2>
+              <h6 class="px-3">Enter your details to continue</h6>
+          </div>
+           {% if form.errors %}
+            <p>Your password did not match Please try again</p>
+            {% else %}
+          <!-- Form inputs -->
+          <form class="mx-auto pe-md-5" id="form" style="width: 90%;" method='POST'>
+          {% csrf_token %} 
+              <!-- Email -->
+              <div class="mb-4">
+                  <label for="email" class="form-label">Username</label>
+                  <input type="text" name="username" id="email" class="form-control" required>
+              </div>
+              <!-- Password -->
+              <div class="mb-3 mb-md-2">
+                  <label for="password" class="form-label">Password</label>
+                  <div class="position-relative">
+                      <input type="password" name="password" id="password" class="form-control" required>
+                      <i class="fas fa-eye position-absolute top-50 end-0 translate-middle" id="toggle"></i>
+                      <i class="fas fa-eye-slash d-none position-absolute top-50 end-0 translate-middle"></i>
+                  </div>
+              </div>
+               <input type="hidden" name="next" value="{{ next }}" >
+              <!-- Forgot password -->
+              <div class="frg-link mb-4 text-end">
+                  <a href="{% url 'password_reset' %}" class="text-decoration-none text-dark">Forgot Password?</a>
+              </div>
+              <!-- Login button -->
+              <div class="d-grid ">
+                  <input type="submit" value="Log in" class="login-btn">
+              </div>
+              <!-- Or -->
+              <p class="hr-lines my-5">
+                <span style="background: #fff; padding: 0 10px;">Or</span>
+              </p>
+          </form>
+           {% endif %}
+          <!-- Other Accounts Sign Up -->
+          <div class="row mx-auto pe-md-5" style="width: 90%;">
+              <div class="d-grid mb-4">
+                  <button class="google-btn">
+                      <img src="https://img.icons8.com/color/25/000000/google-logo.png" width="24"/>
+                      Continue with Google
+                  </button>
+              </div>
+              <div class="d-grid mb-4">
+                  <button class="apple-btn">
+                      <img src="https://img.icons8.com/ios-filled/25/006464/mac-os.png" width="25"/>
+                      Continue with Apple
+                  </button>
+              </div> 
+          </div>
+          <p class="text-center mb-4">
+            Don't have an account? 
+            <a href="{% url 'register' %}" class="text-decoration-none" style="color: #CE2321;">Sign Up</a></p>
+      </main>
+    </div>
+  </div>
+  <!-- End of login page -->
+ 
+ 
+ 
+ {% comment %} {% if form.errors %}
  <p>Your password did not match Please try again</p>
  {% else %}
  <p>Please, use the following form to log-in. If you don't have an 
@@ -26,5 +104,5 @@ account <a href="{% url 'register' %}">register here</a></p>
 <br/>
 <input type="submit" value="Login" >
 </form>
-<p><a href="{% url 'password_reset' %}">Forgotten your password?</a></p>
+<p><a href="{% url 'password_reset' %}">Forgotten your password?</a></p> {% endcomment %}
 {% endblock %}

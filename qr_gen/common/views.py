@@ -5,7 +5,7 @@ from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 
 # Create your views here.
-def contact(request):
+def support(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         
@@ -31,4 +31,4 @@ def contact(request):
     else:
         form = ContactForm()
 
-    return render(request, "contact_page.html", {"contact_form": form})
+    return render(request, "common/support.html", {"contact_form": form})

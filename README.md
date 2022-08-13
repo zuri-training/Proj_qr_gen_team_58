@@ -1,3 +1,10 @@
+# Deployment Instructions for local host 
+1. Clone repository 
+2. create a virtual environment 
+3. install Django in Virtual environment 
+4. install all dependencies in requirements.txt
+5. run your server
+
 # Related Links
 1. Figma - https://www.figma.com/file/a082s18UZ19oI1DBQbFzk1/QReate?node-id=520%3A8409
 2. Task sheet - https://docs.google.com/spreadsheets/d/19bj-5QFdSwQQ6Ks3CcQvKvkfJQVTCRUoQDiTWbltUS0/edit#gid=0
