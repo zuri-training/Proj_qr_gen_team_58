@@ -1,37 +1,10 @@
-from cgitb import html
-from multiprocessing import context
-from unicodedata import name
-from urllib import response
-from django.shortcuts import render, get_object_or_404, redirect
-from django.http import HttpResponse
-import qreate
-from .models import Webqr
-from .forms import UrlForm
-from django.template.loader import get_template
-from xhtml2pdf import pisa
-# from PIL import Image
-import qrcode
-from io import BytesIO
-from django.core.files import File
-from PIL import Image, ImageDraw
-from django.conf import settings
+from .imports import *
 
 
-# from django.conf import settings
-# from django.template.loader import render_to_string
-# import weasyprint
+def features(request):
+    return render(request, 'qreate/features.html')
 
-
-# def qr_pdf(request, *args, **kwargs):
-#     object_pk = kwargs.get('pk')
-#     mypdf = get_object_or_404(Webqr, pk=object_pk)
-#     html = render_to_string('qreate/pdf.html', {'mypdf': mypdf})
-#     response = HttpResponse(content_type='application/pdf')
-#     response['Content-Disposition'] = f'filename=pdf_{mypdf.pk}.pdf'
-#     weasyprint.HTML(string=html).write_pdf(response)
-
-#     return response
-
+@login_required
 def qr_jpg(request, *args, **kwargs):
     object_pk = kwargs.get('pk')
     my_object = get_object_or_404(Webqr, pk=object_pk)
@@ -43,6 +16,7 @@ def qr_jpg(request, *args, **kwargs):
 
 
 # code to convert qrcode to pdf
+@login_required
 def qr_pdf(request, *args, **kwargs):
     object_pk = kwargs.get('pk')
     mypdf = get_object_or_404(Webqr, pk=object_pk)
@@ -68,39 +42,15 @@ def qr_pdf(request, *args, **kwargs):
      
 
 # code to render the newly added qr code
+@login_required
 def created_qr(request):
     qr_list = Webqr.objects.last()
     return render(request, 'qreate/created_qr.html', {'qr_list':qr_list})
 
 
 # code to add a new qr code
+@login_required
 def add_qr(request):
-    # submitted = False
-    # if request.method == 'POST':
-    #     form = UrlForm(request.POST)
-    #     if form.is_valid():
-           
-    #         name = form.cleaned_data['name']
-            
-    #         img = qrcode.make(name)
-        
-    #         form.fields['webqr_code'] = img
-           
-    #         # save qrcode to webqrcode field submit form
-    #         form.save()
-
-    #         qr_list = Webqr.objects.last()
-            
-    #         return render(request, 'qreate/created_qr.html' , {'qr_list':qr_list})
-
-    # else:
-    #     form = UrlForm
-    #     # if 'submitted' in request.GET:
-    #     #     submitted = True
-    # return render(request, 'qreate/add_qr.html', {'form':form })
-        
-        
-
     submitted = False
     if request.method == 'POST':
     
@@ -121,6 +71,7 @@ def add_qr(request):
 
 
 # code to show all the qr codes in the database.
+@login_required
 def show_qr(request):
     qr_list = Webqr.objects.all()
 

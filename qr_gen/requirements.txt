@@ -1,7 +1,7 @@
 asgiref==3.5.2
 colorama==0.4.5
 Django==4.0.6
-django-social-share==2.3.0
+# django-social-share==2.3.0
 Pillow==9.2.0
 qrcode==7.3.1
 sqlparse==0.4.2
@@ -9,3 +9,4 @@ tzdata==2022.1
 backports.zoneinfo==0.2.1
 xhtml2pdf==0.2.8
 WeasyPrint==51
+PyPDF2
