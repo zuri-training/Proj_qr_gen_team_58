@@ -1,5 +1,11 @@
 from .imports import *
 
+def delete(request, *args, **kwargs):
+    object_pk = kwargs.get('pk')
+    deleted_object = Webqr.objects.get(pk=object_pk)
+    deleted_object.delete()
+    return render(request, 'qreate/show_qr.html')
+
 def user_cases(request):
     return render(request, 'qreate/user_cases.html')
 

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "dashboardBase.html" %}
 {% comment %} {% load cloudinary %} {% endcomment %}
 {% block title %}Show QRCode{% endblock %}
 {% block content %}
@@ -10,11 +10,11 @@
  {% for items in qr_list %}
 
   <img  src={{items.webqr_code.url}}>
-    {% comment %} <p class="">{{items.name}}</p> {% endcomment %}
     {{items.name}}
     <a href="{{items.webqr_code.url}}" download>download file in png</a> <br>
-    <a href="{% url 'qr_pdf' items.pk %} " ><button class="btn btn-secondary">download pdf</button></a><br>
-    <a href="{% url 'qr_jpg' items.pk %} " ><button class="btn btn-secondary">download Jpg</button></a>
+    <a href="{% url 'qr_pdf' items.pk %} "><button class="btn btn-secondary">download pdf</button></a><br>
+    <a href="{% url 'qr_jpg' items.pk %} "><button class="btn btn-secondary">download Jpg</button></a>
+    <a href="{% url 'delete' items.pk %} "><button class="btn btn-secondary">Delete</button></a>
 {% endfor %}
   
 {% else %}

@@ -7,7 +7,7 @@ from django.http import HttpResponse
 import qreate
 from .models import Webqr
 from django.template.loader import get_template
-# from xhtml2pdf import pisa
+from xhtml2pdf import pisa
 # from PIL import Image
 # import qrcode
 from io import BytesIO

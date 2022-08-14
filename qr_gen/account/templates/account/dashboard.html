@@ -1,10 +1,59 @@
-{% extends "base.html" %}
+{% extends "dashboardBase.html" %}
+{% load static %}
 {% block title %}Dashboard{% endblock %}
+{% load static %}
 {% block content %}
 
-<h1>Dashboard</h1>
-<hr>
 
-<p>Welcome to your Dashboard</p>
+          <!-- Breadcrumb -->
+          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="dashboard.html" class="text-decoration-none text-dark">Dashboard</a></li>
+                  <li class="breadcrumb-item " aria-current="page"></li>
+              </ol>
+          </nav>
+          <div class="card-wrapper-dash shadow me-auto px-4 mb-3">
+							<div class="row g-0 align-items-center justify-content-center">
+								<div class="col-md-7">
+									<div class="card-body ps-md-0">
+										<h4 class="fw-bold mb-4 card-title">Hi, {{  user.username  }}</h4>
+										<p class="card-text pb-md-3 pb-md-0 text-muted">
+											{% comment %} Designer {% endcomment %}
+										</p>
+                    <p class="card-text pb-md-3 pb-md-0">
+											Ready to take on the world?
+										</p>
+									</div>
+								</div>
+                <div class="col-md-5 d-flex justify-content-center illustration">
+									<img 
+										src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290472/images%20and%20logos/comfort_zone_comfortable_home_man_house_smt7vf.png" 
+										class="img-fluid" 
+										alt="..."
+									/>
+								</div>
+							</div>
+					</div>
+          <div class="row justify-content-around me-auto card-wrapper-dash">
+            <div class="mt-2">
+              <h5 class="fw-bold mb-4">Overview</h5>
+            </div>
+            <div class="card col-5 p-md-4 p-0 text-white dash-card" style="background-color: #20746F;">
+              <div class="text-center py-3 py-lg-4 p-md-0">
+                <h1 class="card-title mb-4">0</h1>
+                <h4 class="card-subtitle code-type">Codes Generated</h4>
+              </div>
+            </div>
+            <div class="card col-5 p-md-4 p-0 text-white dash-card" style="background-color: #20746F;">
+              <div class="text-center py-3 px-2 py-lg-4 p-md-0">
+                <h1 class="card-title mb-4">0</h1>
+                <h4 class="card-subtitle code-type">Active Codes</h4>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+
 
 {% endblock %}
