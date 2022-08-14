@@ -1,7 +1,137 @@
 {% extends "base.html" %}
 {% block title %}Blog{% endblock %}
 {% block content %}
+<!--Main section-->
+<main class="container-fluid main">
+    <!-- hero -->
+    <div class=" row hero-section">
+        <div class="pic-section">
+            <div class="row g-0 mt-3 justify-content-center align-items-center">
+                <div class="hero-text col-md-6">
+                  <div class="ms-auto me-5" style="width: 80%;">
+                    <h1 class="lh-base fw-bolder hero text-nowrap mb-2">Welcome to the</h1>
+                    <div class="">
+                      <h1 class="lh-base fw-bolder mb-0 text-nowrap hero" style="width: min-content;">
+                        <span style="color: #20746F;">QReate</span> blog <br>
+                        <img 
+                          src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290512/images%20and%20logos/Vector_m8tema.png" 
+                          alt="" 
+                          class="img-fluid mb-4"
+                        />
+                      </h1>
+                    </div>
+                    <h5 class="mt-md-3 embed">Step into a world of seamless QR code generation and maximize the power of QR codes to optimize your business.</h5>
+                  </div>
+                    
+                </div>
+                <!-- Illustration -->
+                <div class="col-md-6 d-md-flex justify-content-start align-items-center illustration">
+                  <img 
+                    src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290507/images%20and%20logos/qr-code_with_social_media_icons_ao4bem.svg" 
+                    alt="social media icons circling qr code logo " 
+                    class="img-fluid"
+                  />
+                </div> 
+            </div>
+        </div>
+        <div class="search-bar text-center">
+            <input type="search" class="px-3 my-5" name="search-bar" id="search-bar" placeholder="Search a topic">
+        </div>
+    </div>
+   
+    <!-- cards -->
+    <div class="row justify-content-between mb-5 mx-auto card-section">
+        <div class="card text-center shadow col-md-3 col-sm-5 my-3 mb-md-5 p-0 blog-card">
+            <img src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290478/images%20and%20logos/Frame_776_rqzpzt.png" alt="" class="img-fluid">
+            <div class="card-body">
+              <h4 class="card-title fw-bold mb-3">Why QReate</h4>
+              <p class="card-text mb-4">
+                Discover the unique features of QReate and stand out with your QR codes.
+              </p>
+            </div>  
+        </div>
 
+        <div class="card text-center shadow col-md-3 col-sm-5 my-3 mb-md-5 p-0 blog-card">
+            <img src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290481/images%20and%20logos/Frame_777_nsxqhm.png" alt="" class="img-fluid">
+            <div class="card-body">
+              <h4 class="card-title fw-bold mb-3">QR Code: a beginners quide</h4>
+              <p class="card-text mb-4">
+                New to the world of QR Codes? Learn all you need to know and becone a pro in 10 minutes.
+              </p>
+            </div>  
+        </div>
+
+        <div class="card text-center shadow col-md-3 col-sm-5 my-3 mb-md-5 p-0 blog-card">
+            <img src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290508/images%20and%20logos/rafiki_vfhojs.png" alt="" class="img-fluid">
+            <div class="card-body">
+              <h4 class="card-title fw-bold mb-3">5 Tips for creating top revenue QR codes</h4>
+              <p class="card-text mb-4">
+                Create and position your QR codes to pull in more revenue.
+              </p>
+            </div>  
+        </div>
+
+        <div class="card text-center shadow col-md-3 col-sm-5 my-3 mb-md-5 p-0 blog-card">
+            <img src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290479/images%20and%20logos/Frame_778_gue7sn.png" alt="" class="img-fluid">
+            <div class="card-body">
+              <h4 class="card-title fw-bold mb-3">10 tips for small businesses</h4>
+              <p class="card-text mb-4">
+                Your small business will benefit from these 10 simple steps on ways to optimize qr codes.
+              </p>
+            </div>  
+        </div>
+
+        <div class="card text-center shadow col-md-3 col-sm-5 my-3 mb-md-5 p-0 blog-card">
+            <img src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290509/images%20and%20logos/scan_to_pay_yhfef8.png" alt="" class="img-fluid">
+            <div class="card-body">
+              <h4 class="card-title fw-bold mb-3">Changing the payment world</h4>
+              <p class="card-text mb-4">
+                The payment business has been taken over by QR codes.Find out how to give your business a leap.
+              </p>
+            </div>  
+        </div>
+
+        <div class="card text-center shadow col-md-3 col-sm-5 my-3 mb-md-5 p-0 blog-card">
+            <img src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290466/images%20and%20logos/bro_zpfyw3.png" alt="" class="img-fluid">
+            <div class="card-body">
+              <h4 class="card-title fw-bold mb-3">QR Codes in everyday life</h4>
+              <p class="card-text mb-4">
+                The world is going tech, and QR codes have come to stay. Don't be left out, see how to join in.
+              </p>
+            </div>  
+        </div>
+
+        <div class="col-12 text-center mb-5">
+          <button class="btn btn-lg mt-3 show-more" name="show-more">Show more</button>
+        </div>
+    </div>
+
+    <!-- create qr code section -->
+    <div class="row g-0 justify-content-center align-items-center py-md-5 py-3 mb-5 mx-auto" style="width: 90%;">
+      <div class="col-md-6">
+          <div class="mt-2 mx-auto" style="width: 90%;">
+              <h1 class="fw-bold pb-3 lh-base">Want to make <br> magic?</h1>
+              <p class="mb-5">
+                  Create your unique QR code in less than a minute!
+              </p>
+              <a
+                  href="create.html"
+                  class="btn text-white px-4 text-white mb-5 mb-md-0"
+                  style="background-color: #20746F; border: none; padding: 10px 10px;">
+                  Create a QR code
+              </a>
+          </div>  
+      </div>
+      <!-- Illustration -->
+      <div class="col-md-6 d-flex justify-content-center align-items-center illustration me-2 me-md-0">
+          <img 
+              class="img-fluid"
+              src="https://res.cloudinary.com/dwpitpl9n/image/upload/v1660290466/images%20and%20logos/amico_p4q6sg.svg" 
+              alt=""
+          />
+      </div>
+    </div>
+  </main>
 
 
 {% endblock %}

@@ -6,6 +6,12 @@ def user_cases(request):
 def blog(request):
     return render(request, 'qreate/blog.html')
 
+def Terms_of_Service(request):
+    return render(request, 'qreate/TOS.html')
+
+def Privacy_Policy(request):
+    return render(request, 'qreate/privacyPolicy.html')
+
 
 def features(request):
     return render(request, 'qreate/features.html')

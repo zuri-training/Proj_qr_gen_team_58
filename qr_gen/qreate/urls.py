@@ -11,4 +11,6 @@ urlpatterns = [
     path('created/', views.created_qr, name='created_qr'),
     path('qr_pdf/<pk>/', views.qr_pdf, name='qr_pdf'),
     path('qr_jpg/<pk>/', views.qr_jpg, name='qr_jpg'),
+    path('Terms_of_Service/', views.Terms_of_Service, name='Terms_of_Service'),
+    path('Privacy_Policy/', views.Privacy_Policy, name='Privacy_Policy'),
 ]

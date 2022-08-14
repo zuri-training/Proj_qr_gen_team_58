@@ -11,8 +11,7 @@
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/a0b5f4b3f8.js" crossorigin="anonymous"></script>
   <!-- Styling -->
-  <link rel="stylesheet" href="styles.css">
-  <title>QReate</title>
+  <title>Privacy Policy</title>
 </head>
 <body>
     <div class="container">
@@ -106,12 +105,12 @@
                 all previous written or oral agreements, between you and QReate in connection 
                 with the Site and Service.
             </p>
-            <small class="text-center"><a href="register.html" style="color: #ce2321;" class="text-decoration-none">Close</a></small>
+            <small class="text-center"><a href="{% url 'register' %}" style="color: #ce2321;" class="text-decoration-none">Close</a></small>
             <div class="text-center mt-2 p-4">
                 <small>© Qreate 2022.
-                    <a href="TOS.html" class="text-decoration-none">Terms of Service</a>
+                    <a href="{% url 'Terms_of_Service' %}" class="text-decoration-none">Terms of Service</a>
                     |
-                    <a href="privacyPolicy.html" class="text-decoration-none">Privacy Policy</a>
+                    <a href="{% url 'Privacy_Policy' %}" class="text-decoration-none">Privacy Policy</a>
                 </small>
             </div>
         </div>
