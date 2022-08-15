@@ -82,11 +82,12 @@
             </div>
             
             
+            
 
 
 {% endblock %}
 
- {% comment %} <form method="POST" >
+ <form method="POST" >
          {% csrf_token %}
          <input type="text" placeholder="URL PLEASE" required name="name">
          <button type= "submit" >get qrcode</button>
@@ -96,4 +97,4 @@
       <img src="{{qr.image.url}}"/><br>
       {%endfor%}
 
- {% endcomment %}
+ 
