@@ -1,8 +1,7 @@
 {% extends "dashboardBase.html" %}
-{% block title %}Dashboard{% endblock %}
+
 {% block content %}
-
-
+<div class="col-md-9 col-10 ps-md-5 px-4 mt-4 mb-5 mt-md-0">
           <!-- Breadcrumb -->
           <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
               <ol class="breadcrumb">
@@ -14,9 +13,9 @@
 							<div class="row g-0 align-items-center justify-content-center">
 								<div class="col-md-7">
 									<div class="card-body ps-md-0">
-										<h4 class="fw-bold mb-4 card-title">Hi, {{  user.username  }}</h4>
+										<h4 class="fw-bold mb-4 card-title">Hi, {User}</h4>
 										<p class="card-text pb-md-3 pb-md-0 text-muted">
-											{% comment %} Designer {% endcomment %}
+											Designer
 										</p>
                     <p class="card-text pb-md-3 pb-md-0">
 											Ready to take on the world?
@@ -52,6 +51,7 @@
           
         </div>
     </div>
+</div>
+{% endblock %}    
 
-
-{% endblock %}
+   

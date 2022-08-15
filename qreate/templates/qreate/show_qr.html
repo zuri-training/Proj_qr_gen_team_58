@@ -1,38 +1,23 @@
 {% extends "dashboardBase.html" %}
-{% comment %} {% load cloudinary %} {% endcomment %}
+{% comment %} {% extends "dashboardBase.html" %}
 {% block title %}Show QRCode{% endblock %}
-{% block content %}
+{% block content %} {% endcomment %}
 
-    <!-- Active codes -->
-            <div id="active-codes" class="item">
-                <div class="my-3">
-                    <div class="px-3 py-2 mb-3" style="border: 1px solid #7F7E7E;">
-                      {% if qr_list %}
-                          {% for items in qr_list %}
-                        <div class="row g-0 justify-content-lg-between">
-                            <div class="col-md-2 col-4 d-flex me-2 me-md-0 mb-3 mb-lg-0">
-                                <img 
+
+{% comment %} 
+
+ {% if qr_list %}
+   {% for items in qr_list %}
+   <img 
                                     src="{{items.webqr_code.url}}"
                                     class="img-fluid pe-3 p-lg-0" 
                                     alt="..."
                                 />
-                            </div>
-                            <div class="col-md-7 col-6 d-flex justify-content-between flex-column mb-3 mb-lg-0">
-                                <p class="m-0">Email QR <span style="color: #20746F;">Active</span></p>
-                                {% comment %} <p class="m-0">Nigertech Sims</p> {% endcomment %}
-                                <p class=" mb-0">Business | 31st July, 2022</p>
-                            </div>
-                            <div class="col-md-3 col-2 d-flex justify-content-between flex-lg-column" style="width: min-content;">
-                                 
-                                <a  
-                                    href="{{items.webqr_code.url}}"
-                                    class="btn px-4 py-2 dash-label text-white d-none d-lg-block"
-                                    style="background-color: #20746F; border: none; padding: 10px 10px; width: auto;"
-                                    download>
-                                     Image
-                                </a>
-                              
-                                <a 
+    <a href="{% url 'qr_pdf' items.pk %} "><button class="btn btn-secondary">download pdf</button></a><br>
+    <a href="{% url 'delete' items.pk %} "><button class="btn btn-secondary">Delete</button></a> 
+
+
+     <a 
                                     href="{% url 'qr_pdf' items.pk %}"
                                     class="btn px-4 dash-label d-none d-lg-block"
                                     style="color: #20746F; border: 1px solid #20746F; padding: 10px 10px; width: auto;">
@@ -40,42 +25,117 @@
                                 </a>
                               
                                 <a  
-                                    href="{{items.webqr_code.url}}"
+                                  
                                     class="btn dash-label text-white d-lg-none me-4"
                                     style="background-color: #20746F; border: none; width: 105px"
                                     download>
                                     Download
                                 </a>
-                          
-                            
+{% endfor %}
+  
+
+
+
+
+
+{% endblock %} {% endcomment %}
+
+{% block title %}Show QRCode{% endblock %}
+{% block content %} 
+
+        <div class="col-md-9 col-10 ps-md-5 px-4 mt-4 mt-md-0">
+            <!-- Breadcrumb -->
+            <nav style="--bs-breadcrumb-divider: '>';" class="item" aria-label="breadcrumb" id="activeCodes-bread">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="QRcodes.html" class="text-decoration-none text-dark">My QR Codes</a></li>
+                    <li class="breadcrumb-item " aria-current="page">Active codes</li>
+                </ol>
+            </nav>
+            <nav style="--bs-breadcrumb-divider: '>'; display: none;" class="item" aria-label="breadcrumb" id="drafts-bread">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="QRcodes.html" class="text-decoration-none text-dark">My QR Codes</a></li>
+                    <li class="breadcrumb-item " aria-current="page">Drafts/Archives</li>
+                </ol>
+            </nav>
+            <nav style="--bs-breadcrumb-divider: '>'; display: none;" class="item" aria-label="breadcrumb" id="trash-bread">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="QRcodes.html" class="text-decoration-none text-dark">My QR Codes</a></li>
+                    <li class="breadcrumb-item " aria-current="page">Trash</li>
+                </ol>
+            </nav>
+            <!-- nav bar -->
+            {% comment %} <nav class="d-flex justify-content-between mt-2 dash-nav mx-auto" style="border: 1px solid #7F7E7E;">
+                <p class="m-0 p-md-1 ps-2 QRcodes-nav active" style="cursor: pointer;" data-li="activeCodes">
+                    Active codes
+                </p>
+                <p class="m-0 p-md-1 QRcodes-nav" style="cursor: pointer;" data-li="drafts">
+                    Drafts/Archive
+                </p>
+                <p class="m-0 p-md-1 pe-2 QRcodes-nav" style="cursor: pointer;" data-li="trash">
+                    Trash
+                </p>
+            </nav> {% endcomment %}
+            <!-- Active codes -->
+            <div id="active-codes" class="item">
+                <div class="my-3">
+                    <div class="px-3 py-2 mb-3" style="border: 1px solid #7F7E7E;">
+                        <div class="row g-0 justify-content-lg-between">
+                        {% if qr_list %}
+                                 {% for items in qr_list %}
+                            <div class="col-md-2 col-4 d-flex me-2 me-md-0 mb-3 mb-lg-0">
+                                <img 
+                                    src="{{items.webqr_code.url}}"
+                                    class="img-fluid pe-3 p-lg-0 " 
+                                    alt="..."
+                                />
+                            </div>
+
+                            <div class="col-md-7 col-6 d-flex justify-content-between flex-column mb-3 mb-lg-0">
+                                <p class="m-0">Email QR <span style="color: #20746F;">Active</span></p>
+                                <p class="m-0">Nigertech Sims</p>
+                                <p class=" mb-0">Business | 31st July, 2022</p>
+                            </div>
+                            <div class="col-md-3 col-2 d-flex justify-content-between flex-lg-column" style="width: min-content;">
+                                <a  
+                                    class="btn px-4 py-2 dash-label text-white d-none d-lg-block"
+                                      href="{{items.webqr_code.url}}"
+                                    style="background-color: #20746F; border: none; padding: 10px 10px; width: auto;"
+                                    download>
+                                    Image
+                                </a>
                                 <a 
                                     href="{% url 'qr_pdf' items.pk %}"
-                                    class="btn dash-label d-lg-none"
-                                    style="color: #20746F; border: 1px solid #20746F; width: 105px">
-                                    Get Pdf
+                                    class="btn px-4 dash-label d-none d-lg-block"
+                                    style="color: #20746F; border: 1px solid #20746F; padding: 10px 10px; width: auto;">
+                                    Pdf
                                 </a>
+                                <a  
+                                    class="btn dash-label text-white d-lg-none me-4"
+                                    style="background-color: #20746F; border: none; width: 105px"
+                                      href="{{items.webqr_code.url}}"
+                                      download>
+                                    Image
+                                </a>
+                                <a 
+                                    class="btn dash-label d-lg-none"
+                                     href="{% url 'qr_pdf' items.pk %}"
+                                    style="color: #20746F; border: 1px solid #20746F; width: 105px">
+                                    Pdf
                                 </a>
                             </div>
-                            
+                            {% endfor %}
+                            {% else %}
+                            <h5> You are yet to generate a Qr code</h5>
+                            {% endif %}
+
                         </div>
                     </div>
                 </div>
               
             </div>  
-          
-
-
-
-  <img  src=>
-    {{items.name}}
-   download file in png <br>
-    <a href="{% url 'qr_pdf' items.pk %} "><button class="btn btn-secondary">download pdf</button></a><br>
-    <a href="{% url 'delete' items.pk %} "><button class="btn btn-secondary">Delete</button></a>
-{% endfor %}
-  
-{% else %}
-<h5> You are yet to generate a Qr code</h5>
-{% endif %}
-
+   
+        </div>
+    </div>
+  </div>
 
 {% endblock %}

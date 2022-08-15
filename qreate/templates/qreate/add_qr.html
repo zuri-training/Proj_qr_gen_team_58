@@ -1,23 +1,88 @@
-{% extends "base.html" %}
+{% extends "dashboardBase.html" %}
 {% comment %} {% load cloudinary %} {% endcomment %}
 {% block title %}Show QRCode{% endblock %}
 {% block content %}
 
 
-<h1>Generate Qrcode</h1>
+ <!-- screen after selecting QR code type -->
+            <div class="row g-0 justify-content-center align-items-center mt-3" id="URL" style="display: none;">
+              <!-- input -->
+              <div class="col-md-6">
+                <form class="mx-auto mb-3 mb-md-0" style="width: 90%;">
+                  <label for="url" class="form-label">Enter the URL of your website</label>
+                  <input type="text" class="form-control" id="url" name="url" placeholder="https://www.mywebsite.com" required>
+                </form>
+              </div>
+              <!-- Illustration -->
+              <div class="col-md-6 d-flex justify-content-center align-items-center illustration">
+                  <img 
+                    class="img-fluid"
+                    src="images and logos/Frame 942.svg" 
+                    alt=""
+                  />
+              </div>
+              <div class="d-flex justify-content-between" style="margin-top: 5em; width: 78.5%;">
+                <button  
+                  class="btn px-4 dash-label"
+                  style="color: #30AEA6; border: 1px solid #30AEA6; padding: 8px 10px;"
+                  id="back-btn">
+                  Back
+                </button>
+                <button 
+                  class="btn text-white px-4 dash-label text-end"
+                  style="background-color: #30AEA6; border: none; padding: 10px 10px;"
+                  id="next-btn"
+                  onclick="showURL()">
+                  Next
+                </button>
+              </div>
+            </div>
+            <!-- screen after selecting QR code type of email -->
+            <div class="row g-0 justify-content-center align-items-center mt-3" id="URL-email" style="display: none;">
+              <!-- input -->
+              <div class="col-md-6">
+                <form class="mx-auto mb-md-0" style="width: 90%;">
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Enter email address</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder=".mywebsite.gmail.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Renewal of Subscription" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message class="form-label">Enter the URL of your website</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Content" required></textarea>
+                  </div>
+                </form>
+              </div>
+              <!-- Illustration -->
+              <div class="col-md-6 d-flex justify-content-center align-items-center illustration">
+                  <img 
+                    class="img-fluid"
+                    src="images and logos/Frame 942.svg" 
+                    alt=""
+                  />
+              </div>
+              <div class="d-flex justify-content-between mb-3" style="margin-top: 3em; width: 78.5%;">
+                <button  
+                  class="btn px-4 dash-label"
+                  style="color: #30AEA6; border: 1px solid #30AEA6; padding: 8px 10px;"
+                  id="back-btn">
+                  Back
+                </button>
+                <button 
+                  class="btn text-white px-4 dash-label text-end"
+                  style="background-color: #30AEA6; border: none; padding: 10px 10px;"
+                  id="next-btn"
+                  onclick="showURL()">
+                  Next
+                </button>
+              </div>
+            </div>
+            
+            
 
-{% if submitted %}
-    Your QRCode was generated Successfully
-{% else %}
-    <p> Input text or qr to encode  </p>
-    <form method=POST enctype="multipart/form-data">
-        {% csrf_token %}
-
-        {{ form.name }}
-        <input type="submit" value="Generate QrCode">
-    </form>
-
-{% endif %}
 
 {% endblock %}
 

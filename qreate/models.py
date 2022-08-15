@@ -14,7 +14,7 @@ from django.contrib.auth.models import User
 class Webqr(models.Model):
     name = models.CharField(max_length=1000)
     webqr_code = models.ImageField(upload_to='qr_codes', blank=True)
-    created= models.DateTimeField(auto_now=True, null=True)
+    # created= models.DateTimeField(auto_now=True, null=True)
 
 
     def __str__(self):
