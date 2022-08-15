@@ -9,10 +9,13 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
 from pathlib import Path
-
 import os
+import django_heroku
+import dja_database_url
+
+
+
 
 # import cloudinary_storage
 
@@ -170,3 +173,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 
+
+django_heroku.settings(locals())
