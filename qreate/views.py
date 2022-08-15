@@ -79,7 +79,7 @@ def add_qr(request):
 
             form.save()
             qr_list = Webqr.objects.last()
-            return render(request, 'qreate/created_qr.html', {'qr_list':qr_list})
+            return render(request, 'qreate/show_qr.html', {'qr_list':qr_list})
             
     else:
         form = UrlForm
